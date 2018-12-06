@@ -25,41 +25,42 @@
         <!--<![endif]-->
 </head>
 <body>
+<div id="app">
+
 
 
 <div class="pure-menu pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">app gym</a>
+    <div class="pure-menu-heading">gymboree</div>
+    <dpicker options="lunes-viernes martes-jueves miercoles-sabado"></dpiciker>
 </div>
 
 
-<div class="l-content" id="app">
+<div class="l-content" >
     <div class="pricing-tables pure-g" v-for="tags in steps">
         <div class="pure-u-1 pure-u-md-1-3" v-for="item in tags">
-            <div class="pricing-table pricing-table-free" >
-                <div class="pricing-table-header" v-bind:class="item.bg" >
-                    <h2>[[item.txt]]</h2>
-
-                    <span class="pricing-table-price">
-                        <img v-bind:src="holder"> <span>[[item.sets]]</span>
-                    </span>
-                </div>
-            </div>
+            <ecard
+            v-bind:txt='item.txt'
+            v-bind:bg='item.bg'
+            v-bind:img='item.img'
+            v-bind:sets='item.sets'
+            ></ecard>
         </div>
-
 
     </div> <!-- end pricing-tables -->
 
 </div> <!-- end l-content -->
 
 
-
+</div>
 </body>
+<script src="js/board.js"></script>
 <script type="text/javascript">
 new Vue({
     el: "#app",
     delimiters: ['[[',']]'],
     data: {
         holder: 'http://chittagongit.com//images/biking-icon/biking-icon-7.jpg',
+
         steps: [
             [
                 {txt: 'press banco', sets: '15x4', img: '', bg: 'green-card'},
@@ -85,11 +86,6 @@ new Vue({
             ]
     ]
     },
-    methods: {
-    toggle: function(todo){
-        todo.done = !todo.done
-    }
-    }
 })
 </script>
 </html>
