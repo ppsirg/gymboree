@@ -244,3 +244,8 @@ p {
         font-size: 3em;
     }
 }
+
+.dpicker{
+  text-align: center;
+  padding: 15px;
+}

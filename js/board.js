@@ -31,7 +31,7 @@ Vue.component('dpicker', {
       }
   },
   template:`
-  <div>
+  <div class="dpicker">
   <select id='yey' v-on:change="choice">
    <option v-for="item in opt" v-bind:value="item">[[item]]</option>
   </select>
@@ -45,49 +45,49 @@ Vue.component('ppanel', {
       routine: {
           'lunes_viernes': [
               [
-                  {txt: 'ext_cuadriceps', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'press pierna', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'curl femoral', sets: '15x4', img: '', bg: 'pink-card'},
+                  {txt: 'ext_cuadriceps', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'press pierna', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'curl femoral', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
               ],
               [
-                  {txt: 'tijeras', sets: '15x4', img: '', bg: 'green-card'},
-                  {txt: 'abductor', sets: '15x4', img: '', bg: 'green-card'},
-                  {txt: 'aductor', sets: '15x4', img: '', bg: 'green-card'},
+                  {txt: 'tijeras', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
+                  {txt: 'abductor', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
+                  {txt: 'aductor', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
               ]
           ],
           'miercoles_sabado': [
               [
-                  {txt: 'press banco', sets: '15x4', img: '', bg: 'green-card'},
-                  {txt: 'peck-deck', sets: '15x4', img: '', bg: 'green-card'},
-                  {txt: 'press maquina', sets: '15x4', img: '', bg: 'green-card'},
+                  {txt: 'press banco', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
+                  {txt: 'peck-deck', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
+                  {txt: 'press maquina', sets: '15x4', img: 'img/default.svg', bg: 'green-card'},
               ],
               [
-                  {txt: 'jalon polea espalda', sets: '15x4', img: '', bg: 'blue-card'},
-                  {txt: 'remo sentado', sets: '15x4', img: '', bg: 'blue-card'},
-                  {txt: 'remo t', sets: '15x4', img: '', bg: 'blue-card'},
+                  {txt: 'jalon polea espalda', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
+                  {txt: 'remo sentado', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
+                  {txt: 'remo t', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
               ],
               [
-                  {txt: 'curl barra', sets: '15x4', img: '', bg: 'yellow-card'},
-                  {txt: 'martillo', sets: '15x4', img: '', bg: 'yellow-card'},
-                  {txt: 'curl barra', sets: '15x4', img: '', bg: 'yellow-card'},
+                  {txt: 'curl barra', sets: '15x4', img: 'img/default.svg', bg: 'yellow-card'},
+                  {txt: 'martillo', sets: '15x4', img: 'img/default.svg', bg: 'yellow-card'},
+                  {txt: 'curl barra', sets: '15x4', img: 'img/default.svg', bg: 'yellow-card'},
               ],
               [
-                  {txt: 'ext polea', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'copa', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'extension- press nuca', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'elevacion lateral', sets: '15x4', img: '', bg: 'pink-card'},
-                  {txt: 'elevacion frontal', sets: '15x4', img: '', bg: 'pink-card'},
+                  {txt: 'ext polea', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'copa', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'extension- press nuca', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'elevacion lateral', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
+                  {txt: 'elevacion frontal', sets: '15x4', img: 'img/default.svg', bg: 'pink-card'},
               ]
       ],
           'martes_jueves': [
               [
-                  {txt: 'exprimidas', sets: '15x4', img: '', bg: 'blue-card'},
-                  {txt: 'elevacion alternada', sets: '15x4', img: '', bg: 'blue-card'},
-                  {txt: 'elevacion piernas', sets: '15x4', img: '', bg: 'blue-card'},
+                  {txt: 'exprimidas', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
+                  {txt: 'elevacion alternada', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
+                  {txt: 'elevacion piernas', sets: '15x4', img: 'img/default.svg', bg: 'blue-card'},
               ],
               [
-                  {txt: 'remo barra', sets: '15x4', img: '', bg: 'yellow-card'},
-                  {txt: 'oblicuas', sets: '15x4', img: '', bg: 'yellow-card'},
+                  {txt: 'remo barra', sets: '15x4', img: 'img/default.svg', bg: 'yellow-card'},
+                  {txt: 'oblicuas', sets: '15x4', img: 'img/default.svg', bg: 'yellow-card'},
               ]
           ],
 
@@ -109,8 +109,8 @@ Vue.component('ppanel', {
   <div>
   <div class="pure-menu pure-menu-horizontal">
       <div class="pure-menu-heading">gymboree</div>
-      <dpicker v-on:picker_update="check_picker" v-bind:options="picker_input"></dpicker>
   </div>
+  <dpicker v-on:picker_update="check_picker" v-bind:options="picker_input"></dpicker>
   <div class="l-content" v-for="(steps, key) in routine" v-show="picker_state == key">
       <div class="pricing-tables pure-g" v-for="tags in steps">
           <div class="pure-u-1 pure-u-md-1-3" v-for="item in tags">

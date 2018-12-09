@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="gym application">
     <title>gymboree - gym app</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vendor/vue/vue.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/purecss/pure-min.css" >
 
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+        <link rel="stylesheet" href="vendor/purecss/grids-responsive-min.css">
     <!--<![endif]-->
-
 
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="css/layouts/pricing-old-ie.css">
@@ -36,34 +35,6 @@
 new Vue({
     el: "#app",
     delimiters: ['[[',']]'],
-    data: {
-        holder: 'http://chittagongit.com//images/biking-icon/biking-icon-7.jpg',
-
-        steps: [
-            [
-                {txt: 'press banco', sets: '15x4', img: '', bg: 'green-card'},
-                {txt: 'peck-deck', sets: '15x4', img: '', bg: 'green-card'},
-                {txt: 'press maquina', sets: '15x4', img: '', bg: 'green-card'},
-            ],
-            [
-                {txt: 'jalon polea espalda', sets: '15x4', img: '', bg: 'blue-card'},
-                {txt: 'remo sentado', sets: '15x4', img: '', bg: 'blue-card'},
-                {txt: 'remo t', sets: '15x4', img: '', bg: 'blue-card'},
-            ],
-            [
-                {txt: 'curl barra', sets: '15x4', img: '', bg: 'yellow-card'},
-                {txt: 'martillo', sets: '15x4', img: '', bg: 'yellow-card'},
-                {txt: 'curl barra', sets: '15x4', img: '', bg: 'yellow-card'},
-            ],
-            [
-                {txt: 'ext polea', sets: '15x4', img: '', bg: 'pink-card'},
-                {txt: 'copa', sets: '15x4', img: '', bg: 'pink-card'},
-                {txt: 'extension- press nuca', sets: '15x4', img: '', bg: 'pink-card'},
-                {txt: 'elevacion lateral', sets: '15x4', img: '', bg: 'pink-card'},
-                {txt: 'elevacion frontal', sets: '15x4', img: '', bg: 'pink-card'},
-            ]
-    ]
-    },
 })
 </script>
 </html>
